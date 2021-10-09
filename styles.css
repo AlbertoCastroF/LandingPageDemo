@@ -375,13 +375,16 @@ header {
 
 .portfolio__item {
   background-color: var(--clr-accent);
-
+  height: 300px;
+  width: 300px;
+  margin-bottom: 3rem;
   overflow: hidden;
 }
 
 .portfolio__img {
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
   height: 100%;
+  object-fit: cover;
 }
 
 .portfolio__img:hover {
