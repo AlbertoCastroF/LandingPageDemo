@@ -58,7 +58,7 @@ img {
   width: 100%;
 }
 
-:focus {
+*:focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
 }
@@ -370,14 +370,15 @@ header {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  align-content: center;
 }
 
 .portfolio__item {
   background-color: var(--clr-accent);
   height: 300px;
   width: 300px;
-  margin-bottom: 3rem;
   overflow: hidden;
 }
 
@@ -443,7 +444,7 @@ header {
 
 .portfolio-item-individual {
   padding: 0 2em 2em;
-  max-width: 1000px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -451,4 +452,13 @@ header {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.project-preview {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
+  cursor: pointer;
+}
+
+.project-preview:hover {
+  transform: scale(1.1);
 }
